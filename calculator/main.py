@@ -11,12 +11,12 @@ class Calculator:
         Construtor.
         """
 
-        self.window = tk.Tk()
-        self.window.title("Calculadora")
-        self.window.resizable(width=0, height=0)
+        window = tk.Tk()
+        window.title("Calculadora")
+        window.resizable(width=0, height=0)
 
         self.screen_numbers = tk.Entry(
-            self.window,
+            window,
             font="Arial 20 bold",
             background="#1d2f38",
             foreground="white",
@@ -24,7 +24,7 @@ class Calculator:
         )
         self.screen_numbers.pack()
 
-        self.frame = tk.Frame(self.window)
+        self.frame = tk.Frame(window)
         self.frame.pack()
 
         self.__create_btn('(', 0, 0, lambda: self.__display("("))
@@ -48,7 +48,7 @@ class Calculator:
         self.__create_btn(',', 4, 2, lambda: self.__display("."))
         self.__create_btn('+', 4, 3, lambda: self.__display("+"))
 
-        self.window.mainloop()
+        window.mainloop()
 
     def __create_btn(self, text: str, row: int, column: int, command) -> tk.Button:
         """
@@ -107,4 +107,4 @@ class Calculator:
 
 
 if __name__ == '__main__':
-    calc = Calculator()
+    Calculator()
