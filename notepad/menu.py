@@ -31,3 +31,17 @@ def read(text_area: tkinter.Text) -> None:
         content = file.read()
 
     text_area.insert(1.0, content)
+
+
+def update(
+    text_area: tkinter.Text,
+    spin_size: tkinter.Spinbox,
+    spin_font: tkinter.Spinbox) -> None:
+    """
+    Atualiza o texto com as propriedades definidas no submenu.
+    """
+
+    size = spin_size.get()
+    font = spin_font.get()
+
+    text_area.config(font=f"{font} {size} bold")
