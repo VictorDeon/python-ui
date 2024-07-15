@@ -1,6 +1,4 @@
 import tkinter as tk
-from tkinter import filedialog
-import youtube_dl
 import os
 
 
@@ -102,11 +100,8 @@ class Downloader:
 
     def __download(self, link):
         """
-        Realiza o download do video.        
+        Realiza o download do video.
         """
-
-        folder = filedialog.askdirectory()
-        print(folder)
 
         os.system("youtube-dl " + str(link))  # Faz download do video.
         self.__complete()
@@ -128,7 +123,7 @@ class Downloader:
         window.title('Efetuado')
         window.resizable(0, 0)
         window.geometry('300x200')
- 
+
         text = tk.Label(window, text='Download Efetuado', pady=30)
         text.pack()
 

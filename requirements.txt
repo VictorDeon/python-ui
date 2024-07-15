@@ -1,3 +1,4 @@
 youtube-dl==2021.12.17
 pillow==10.4.0
 Pillow-PIL==0.1.dev0
+ttkthemes==3.2.2
